@@ -2,6 +2,9 @@
 if __name__ == "__main__":
     import sys
     argc = len(sys.argv) - 1
-    print("{} argurment:".format(argc))
-    for i in range(1, argc + 1):
-        print("{}: {}".format(i, sys.argv[i]))
+    if argc == 0:
+        print("{} arguments.".format(argc))
+    else:
+        print("{} argurment:".format(argc))
+        for i in range(1, argc + 1):
+            print("{}: {}".format(i, sys.argv[i]))
