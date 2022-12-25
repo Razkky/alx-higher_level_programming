@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/python3o
 def multiple_returns(sentence):
-    length = len(sentence)
-    return length, sentence[0]
+    if sentence:
+         length = len(sentence)
+         return length, sentence[0]
