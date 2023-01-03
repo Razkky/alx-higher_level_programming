@@ -5,11 +5,16 @@
 class Rectangle:
     """Represent a rectangle"""
 
-    def __init__(self, width, height):
-        """Initialize private instance"""
+    def __init__(self, width=0, height=0):
+        """Initialize private instance
 
-        self.__width = width
-        self.__height = height
+        Args:
+            width (int): width of rectangle
+            height (int): height of rectangle
+            """
+
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -20,7 +25,7 @@ class Rectangle:
     def width(self, value):
         """Set the value of width"""
         if not isinstance(value, int):
-            raise TypeError("width must be and integer")
+            raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
         else:
@@ -35,7 +40,7 @@ class Rectangle:
     def height(self, value):
         """Set the height of a rectangle"""
         if not isinstance(value, int):
-            raise TypeError("height  must be and integer")
+            raise TypeError("height  must be an integer")
         elif value < 0:
             raise ValueError("height  must be >= 0")
         else:
