@@ -3,7 +3,7 @@
 
 
 class BaseGeometry:
-    """A BaseGeometry class"""
+    """Represent a  BaseGeometry class"""
 
     def area(self):
         """Define a fucntion area"""
