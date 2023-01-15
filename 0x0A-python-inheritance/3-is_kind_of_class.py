@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Define a funciton that returns True if the object is an 
-    instance or is an instance of a subclass or False if 
+"""Define a funciton that returns True if the object is an
+    instance or is an instance of a subclass or False if
     otherwise"""
 
 
