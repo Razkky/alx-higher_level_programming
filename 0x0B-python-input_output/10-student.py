@@ -22,6 +22,7 @@ class Student:
         Return:
             dict of attribute and value in attrs if attrs is not empty
             or dict of all attributes of the object"""
-        if type(attrs) == list and all(type(item) == str for item in attrs): 
-           return {key: getattr(self, key) for key in attrs if hasattr(self, key)}
+        if type(attrs) == list and all(type(item) == str for item in attrs):
+            return {key: getattr(self, key) for key in attrs
+                    if hasattr(self, key)}
         return self.__dict__
