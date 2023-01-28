@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-"""Define add_integer function"""
+"""Define add_integer function
+    Take two intgers 
+    Int a
+    int b
+    return sum"""
 
 def add_integer(a, b=98):
     """ Adds two integers
-    Args:
-        a(int, float): first integr
-        b(int, float): second integer
     Return:
-        addition of both integers
-        """
+        sum"""
     if type(a) not in (int, float):
         raise TypeError("a must be an integer")
     if type(b) not in (int, float):
