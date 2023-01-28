@@ -1,1 +1,41 @@
-"""Test cases"""
+================
+Testing the 0-add_integer module using doctest
+=================
+
+Importing the 0-add_integer modulel
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Checking for module documentation
+	>>> doc =  __import__("0-add_integer").__doc__
+	>>> len(doc) > 1
+	True
+
+Checking for function documentaion
+	>>> func = __import__("0-add_integer").add_integer.__doc__
+	>>> len(func) > 1
+	True
+
+Test case1:
+	inputing two integers
+	>>> print(add_integer(2, 5))
+	7
+
+Test case2:
+	inputing one integer and one floating point number
+	>>> print(add_integer(2, 5.5))
+	7
+
+Test case3:
+	inputing a non integer nor floating point value for a
+	>>> print(add_integer("name", 5))
+	Traceback (most recent call last):
+	....
+	TypeError: a must be an integer
+
+Test case4:
+	inputing a non integer nor floating point value for b
+	>>> b = add_integer(3, "name")
+	Traceback (most recent call last):
+        ....
+        TypeError: b must be an integer
+	
