@@ -38,3 +38,11 @@ Test Case3:
 	Traceback (most recent call last):	
 	....
 	TypeError: div must be a number
+
+Test case4:
+	Checking if div is equal to 0
+	>>> matrix =  [[1, 2, 3], [4, 5, 6]]
+	>>> print(matrix_divided(matrix, 0))
+	Traceback (most recent call last):	
+	....
+	ZeroDivisionError: division by zero
