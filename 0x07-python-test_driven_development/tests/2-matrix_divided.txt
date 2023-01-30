@@ -1,0 +1,24 @@
+=========================
+Testing the 2-matrix_divided module using doc test
+========================
+
+Importing the 2-matrix_divided module
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Checking for the module documentaion
+	>>> doc = __import__('2-matrix_divided').__doc__
+	>>> len(doc) > 1
+	True
+
+Checking for the function documentation:
+	>>> func = __import__('2-matrix_divided').matrix_divided.__doc__
+	>>> len(func) > 1
+	True
+
+Test Case1:
+	Checking for all values of list to be integers
+	>>> matrix =  [[1, 2, 3], [4, 5, 6]]
+	>>> print(matrix_divided(matrix, 3))
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+	>>> print(matrix)
+	[[1, 2, 3], [4, 5, 6]]
