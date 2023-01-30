@@ -39,3 +39,31 @@ Test case4:
         ....
         TypeError: b must be an integer
 	
+Test case4:
+	inputing a dictionary for a and integer for b
+	>>> print(add_integer({}, 3))
+	Traceback (most recent call last):
+        ....
+        TypeError: a must be an integer
+
+Test case5:
+	inputing a list for a and integer for b
+	>>> print(add_integer([], 3))
+	Traceback (most recent call last):
+        ....
+        TypeError: a must be an integer
+
+Test case6:
+	inputing a negative value for a
+	>>> print(add_integer(-1, 8))
+	7
+
+Test case7:
+	inputing a negative value for b
+	>>> print(add_integer(7, -3))
+	4
+
+Test case8:
+	inputing negative value for a and b
+	>>> print(add_integer(-6, -7))
+	-13
