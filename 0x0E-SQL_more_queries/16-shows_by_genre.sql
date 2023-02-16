@@ -1,5 +1,5 @@
 -- list all shows and genres linked to that show from hbtn_0d_tvshows database
-SELECT ts.title as title, tg.name as name
+SELECT ts.title AS title, tg.name AS name
 FROM tv_shows AS ts
 LEFT JOIN tv_show_genres
 ON ts.id = tv_show_genres.show_id 
