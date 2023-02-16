@@ -1,5 +1,5 @@
 -- list all comedy shows in database hbtn_0d_tvshows
-SELECT tv_shows.title as title
+SELECT tv_shows.title AS title
 FROM tv_genres
 JOIN tv_show_genres 
 ON tv_genres.id = tv_show_genres.genre_id
