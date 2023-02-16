@@ -5,4 +5,4 @@ LEFT JOIN tv_show_genres
 ON ts.id = tv_show_genres.show_id 
 LEFT JOIN tv_genres AS tg
 ON tg.id = tv_show_genres.genre_id
-ORDER BY title
+ORDER BY title, name
