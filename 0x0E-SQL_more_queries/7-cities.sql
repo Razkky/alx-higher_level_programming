@@ -1,6 +1,7 @@
 -- create a database hbtn_0d_usa if not exists and a table cities
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 USE hbtn_0d_usa;
+DROP TABLE IF EXISTS cities;
 CREATE TABLE IF NOT EXISTS cities (
 	id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,
 	state_id INT NOT NULL,
