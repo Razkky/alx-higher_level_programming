@@ -1,3 +1,4 @@
+-- lists all shows from database by their rating
 SELECT title, SUM(rate) as rating
 FROM tv_shows as ts
 JOIN tv_show_ratings as tsr
