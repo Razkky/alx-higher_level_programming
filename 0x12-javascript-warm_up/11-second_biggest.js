@@ -1,14 +1,13 @@
 #!/usr/bin/node
 
-const size = process.argv.length;
-if (process.argv.length <= 3) {
+if (process.argv.length < 4) {
   console.log('0');
 } else {
+  const size = process.argv.length;
   const nums = [];
   for (let i = 2; i < size; i++) {
     nums[i - 2] = parseInt(process.argv[i]);
   }
-  nums.sort();
-  nums.reverse();
+  nums.sort(function (a, b) { return b - a; });
   console.log(nums[1]);
 }
