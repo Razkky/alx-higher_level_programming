@@ -8,10 +8,16 @@ module.exports = class Rectangle {
     }
   }
 
-  print () {
+  print (x) {
     let display = '';
+    let c;
+    if (x) {
+      c = x;
+    } else {
+      c = 'X';
+    }
     for (let i = 0; i < this.width; i++) {
-      display += 'X';
+      display += c;
     }
     for (let i = 0; i < this.height; i++) {
       console.log(display);
