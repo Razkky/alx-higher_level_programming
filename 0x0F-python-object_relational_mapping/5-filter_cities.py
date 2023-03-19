@@ -13,8 +13,8 @@ if __name__ == "__main__":
                 FROM cities \
                 JOIN states \
                 ON state_id = states.id \
-                WHERE states.name LIKE BINARY %s \
-                ORDER BY cities.id ASC", (argv[4],))
+                WHERE states.name LIKE BINARY %(state.name)s \
+                ORDER BY cities.id ASC", {'state.name': argv[4]})
         cities = cur.fetchall()
     if cities:
         print(", ".join([city[0] for city in cities]))
