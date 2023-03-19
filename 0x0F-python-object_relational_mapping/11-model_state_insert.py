@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" This script print the state id that matches a particular state
-    from the database using sqlalchemy orm
+"""
+    This script add a new State to the state table
 """
 from model_state import State, Base
 from sqlalchemy import create_engine
@@ -14,9 +14,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State.id, State.name).filter(State.name == argv[4])
-    states = states.first()
-    if states:
-        print(states[0])
-    else:
-        print("Not found")
+    Louisiana = State(name = 'Louisiana')
+    session.add(Louisiana)
+    session.commit()
+    print(Louisiana.id)
