@@ -9,7 +9,7 @@ if __name__ == "__main__":
                          db=argv[3], passwd=argv[2], user=argv[1])
 
     with db.cursor() as cur:
-        cur.execute("SELECT cities.name \
+        cur.execute("SELECT cities.name, cities.id \
                 FROM cities \
                 JOIN states \
                 ON state_id = states.id \
